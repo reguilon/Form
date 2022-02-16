@@ -51,7 +51,7 @@ body {
     margin: 50px 0;
 }
 form {
-    width: 300px;
+    width: 450px;
     margin: 0 auto;
 }
 h3 {
@@ -73,20 +73,35 @@ span{
 .join-btn {
     margin-top: 10px;
 }
-
+.password-container {
+    position: relative;
+}
+.password-container .use {
+    position: absolute;
+    top: 28px;
+    right: 5px;
+}
+.next-box {
+    display: none;
+    color: green;
+}
+.next-box-error {
+    /* display: none; */
+    color: red;
+}
 
 .display-f {
     display: flex;
     justify-content: space-between;
 }
-.width-300 {
-    width: 300px;
+.width-450 {
+    width: 450px;
 }
-.width-308 {
-    width: 308px;
+.width-458 {
+    width: 458px;
 }
-.width-93 {
-    width: 93px;
+.width-145 {
+    width: 145px;
 }
 .col-gray {
     display: inline-block;

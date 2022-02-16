@@ -17,39 +17,37 @@
             <fieldset>
                 <div>
                     <h3>아이디</h3>
-                    <input type="text" class="width-300" name="userId" id="uid" autofocus>
-                    <span class="error">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+                    <input type="text" class="width-450" name="userId" id="uid" autofocus>
+                    <span class="next-box-error">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
                 </div>
-                <div>
+                <div class="password-container">
                     <h3>비밀번호</h3>
-                    <input type="password" class="width-300" name="password01" id="pwd">
-                    <span>
-                        사용가능
-                        사용불가
-                    </span>
+                    <input type="password" class="width-450" name="password01" id="pwd">
+                    <span class="next-box use">사용가능</span>
+                    <span class="next-box-error use">사용불가</span>
                     <!-- after 이미지 -->
-                    <span>
-                        필수 정보입니다.
+                    <span class="next-box-error">필수 정보입니다.</span>
+                    <span class="next-box-error">
                         8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.
                     </span>
                     <h3>비밀번호 확인</h3>
-                    <input type="password" class="width-300" name="password02" id="repwd">
+                    <input type="password" class="width-450" name="password02" id="repwd">
                     <!-- after 이미지 -->
-                    <span>비밀번호가 일치하지 않습니다</span>
+                    <span class="next-box-error">비밀번호가 일치하지 않습니다</span>
                 </div>
                 <div>
                     <h3>이름</h3>
-                    <input type="text" class="width-300" name="name" id="uname">
-                    <span>
-                        필수 정보입니다.
+                    <input type="text" class="width-450" name="name" id="uname">
+                    <span class="next-box-error">필수 정보입니다.</span>
+                    <span class="next-box-error">
                         한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)
                     </span>
                 </div>
                 <div>
                     <h3>생년월일</h3>
                     <div class="display-f">
-                        <input type="text" placeholder="년(4자)" class="width-93" name="year" maxlength="4" id="yy">
-                        <select class="width-93" name="month" id="mm">
+                        <input type="text" placeholder="년(4자)" class="width-145" name="year" maxlength="4" id="yy">
+                        <select class="width-145" name="month" id="mm">
                             <option value="">월</option>
                             <option value="01">1월</option>
                             <option value="02">2월</option>
@@ -64,17 +62,15 @@
                             <option value="11">11월</option>
                             <option value="12">12월</option>
                         </select>
-                        <input type="text" placeholder="일" class="width-93" name="date" maxlength="2" id="dd">
+                        <input type="text" placeholder="일" class="width-145" name="date" maxlength="2" id="dd">
                     </div>
-                    <span>
-                        태어난 년도 4자리를 정확하게 입력하세요.
-                        태어난 월을 선택하세요.
-                        태어난 일(날짜) 를 정확하게 입력하세요.
-                    </span>
+                    <span class="next-box-error">태어난 년도 4자리를 정확하게 입력하세요.</span>
+                    <span class="next-box-error">태어난 월을 선택하세요.</span>
+                    <span class="next-box-error">태어난 일(날짜) 를 정확하게 입력하세요.</span>
                 </div>
                 <div>
                     <h3>성별</h3>
-                    <select class="width-308" name="gender" id="gender">
+                    <select class="width-458" name="gender" id="gender">
                         <option value="">성별</option>
                         <option value="">남자</option>
                         <option value="">여자</option>
@@ -83,12 +79,12 @@
                 </div>
                 <div>
                     <h3>본인 확인 이메일 <span class="col-gray">(선택)</span></h3>
-                    <input type="text" placeholder="선택입력" class="width-300" name="mail" id="mail">
-                    <span>
+                    <input type="text" placeholder="선택입력" class="width-450" name="mail" id="mail">
+                    <span class="next-box-error">
                         이메일 주소를 다시 확인해주세요.
                     </span>
                 </div>
-                <button type="button" class="width-308 join-btn" name="join" onclick="joinform_check();">회원가입</button>
+                <button type="button" class="width-458 join-btn" name="join" onclick="joinform_check();">회원가입</button>
             </fieldset>
         </form>
     </main>

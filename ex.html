@@ -7,7 +7,6 @@
     <title>회원가입</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="./common.css">
-    <script src="./common.js"></script>
 </head>
 <body>
     <header id="header">
@@ -18,9 +17,9 @@
             <fieldset>
                 <div class="id-container">
                     <h3>아이디</h3>
-                    <input type="text" class="width-450" name="userId" id="uid" autofocus>
+                    <input type="text" class="width-450" name="userId" id="uid">
                     <span class="next-box-error space">필수 정보입니다.</span>
-                    <span class="next-box-error">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+                    <span class="next-box-error d">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
                 </div>
                 <div class="password-container">
                     <h3>비밀번호</h3>
@@ -86,9 +85,10 @@
                         이메일 주소를 다시 확인해주세요.
                     </span>
                 </div>
-                <button type="button" class="width-458 join-btn" name="join" onclick="joinform_check();">회원가입</button>
+                <button type="button" class="width-458 join-btn" name="join">회원가입</button>
             </fieldset>
         </form>
     </main>
+    <script src="./common.js"></script>
 </body>
 </html>

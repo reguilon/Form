@@ -89,11 +89,9 @@ select {
     top: 28px;
     right: 5px;
 }
-.next-box {
-    display: none;
-    color: green;
-}
-.next-box-error {
+
+.essential,
+.announce {
     display: none;
     color: red;
 }

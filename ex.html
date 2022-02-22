@@ -12,12 +12,12 @@
     <header id="header">
         <h1 class="tit">회원가입</h1>
     </header>
-    <main id="main">
+    <form name="join" onsubmit="return validate();" action="http://coding-factory.tistory.com/196" method="post" enctype="text/plain"></form>
         <form action="">
             <fieldset>
                 <div class="id-container">
                     <h3>아이디</h3>
-                    <input type="text" class="width-450" name="userId" id="uid">
+                    <input type="text" class="width-450" name="userId" id="uid" >
                     <span class="next-box-error essential">필수 정보입니다.</span>
                     <span class="next-box-error announce">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
                 </div>
@@ -45,8 +45,9 @@
                 <div class="birth-container">
                     <h3>생년월일</h3>
                     <div class="display-f">
-                        <input type="text" placeholder="년(4자)" class="width-145" name="year" maxlength="4" id="yy">
-                        <select class="width-145" name="month" id="mm">
+                        <input type="text" placeholder="년(4자)" 
+                        class="width-third" name="year" maxlength="4" id="yy">
+                        <select class="width-third" name="month" id="mm">
                             <option value="">월</option>
                             <option value="01">1월</option>
                             <option value="02">2월</option>
@@ -61,14 +62,14 @@
                             <option value="11">11월</option>
                             <option value="12">12월</option>
                         </select>
-                        <input type="text" placeholder="일" class="width-145" name="date" maxlength="2" id="dd">
+                        <input type="text" placeholder="일" class="width-third" name="date" maxlength="2" id="dd">
                     </div>
                     <span class="next-box-error announce">태어난 년도 4자리를 정확하게 입력하세요.</span>
                     <span class="next-box-error announce">태어난 일(날짜) 를 정확하게 입력하세요.</span>
                 </div>
                 <div class="gender-container">
                     <h3>성별</h3>
-                    <select class="width-458" name="gender" id="gender">
+                    <select class="width-full" name="gender" id="gender">
                         <option value="">성별</option>
                         <option value="">남자</option>
                         <option value="">여자</option>
@@ -76,12 +77,17 @@
                 </div>
                 <div class="emial-container">
                     <h3>본인 확인 이메일</h3>
-                    <input type="text" placeholder="선택입력" class="width-450" name="mail" id="mail">
+                    <input type="text" class="width-450" name="mail" id="mail">
+                    <span class="next-box-error essential">필수 정보입니다.</span>
                     <span class="next-box-error announce">
                         이메일 주소를 다시 확인해주세요.
                     </span>
                 </div>
-                <button type="button" class="width-458 join-btn" name="join">회원가입</button>
+                <div class="btn-container">
+                    <input type="reset" value="다시입력" class="width-half height-30">
+                    <button type="button" class="width-half height-30" name="join" onclick="join_btn()">회원가입</button>
+                </div>
+                
             </fieldset>
         </form>
     </main>

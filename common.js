@@ -8,7 +8,7 @@ window.onload = function() {
     let umail = document.getElementById("mail");
     let idCheck = /^[a-z0-9_-]{5,20}$/; 
     let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/; 
-    let nameCheck = /^[?-?]{2,4}$/;
+    let nameCheck = /^[가-힣]{2,4}$/;
     let yearCheck = /^[0-9]{4}/;
     let dayCheck = /^[0-9]{1,2}/;
     let mailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
@@ -125,5 +125,5 @@ window.onload = function() {
     };
 };
 function join_btn() {
-    alert("????? ?? ?????");
+    alert("회원가입이 완료 되었습니다.");
 };

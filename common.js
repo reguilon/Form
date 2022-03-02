@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function validate() {
     let uid = document.getElementById("uid");
     let pwd = document.getElementById("pwd");
     let repwd = document.getElementById("repwd");
@@ -6,8 +6,8 @@ window.onload = function() {
     let year = document.getElementById("yy");
     let day = document.getElementById("dd");
     let umail = document.getElementById("mail");
-    let idCheck = /^[a-z0-9_-]{5,20}$/; 
-    let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/; 
+    let idCheck = /^[a-z0-9_-]{5,20}$/;
+    let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
     let nameCheck = /^[가-힣]{2,4}$/;
     let yearCheck = /^[0-9]{4}/;
     let dayCheck = /^[0-9]{1,2}/;
@@ -16,12 +16,10 @@ window.onload = function() {
     uid.onblur = function(e) {
         if (uid.value === "") {
             document.getElementsByClassName('essential')[0].style.display = "block";
-            uid.focus(); 
             return false;
         };
         if (!idCheck.test(uid.value)) {
             document.getElementsByClassName('announce')[0].style.display = "block";
-            uid.focus();
             return false;
         };
         if (idCheck.test(uid.value)) {
@@ -31,14 +29,8 @@ window.onload = function() {
     };
 
     pwd.onblur = function(e) {
-        if (pwd.value === "") {
-            document.getElementsByClassName('essential')[1].style.display = "block";
-            pwd.focus();
-            return false;
-        };
         if (!pwdCheck.test(pwd.value)) {
             document.getElementsByClassName('announce')[1].style.display = "block";
-            pwd.focus();
             return false;
         };
         if (pwdCheck.test(pwd.value)) {
@@ -50,23 +42,16 @@ window.onload = function() {
     repwd.onblur = function(e) {
         if (repwd.value !== pwd.value) {
             document.getElementsByClassName('announce')[2].style.display = "block";
-            repwd.focus();
             return false;
         };
         if (repwd.value == pwd.value) {
             document.getElementsByClassName('announce')[2].style.display = "none";
         }
     };
-    
+
     uname.onblur = function(e) {
-        if (uname.value === "") {
-            document.getElementsByClassName('essential')[2].style.display = "block";
-            uname.focus();
-            return false;
-        };
         if (!nameCheck.test(uname.value)) {
             document.getElementsByClassName('announce')[3].style.display = "block";
-            uname.focus();
             return false;
         };
         if (nameCheck.test(uname.value)) {
@@ -76,14 +61,8 @@ window.onload = function() {
     };
 
     year.onblur = function(e) {
-        if (year.value === "") {
-            document.getElementsByClassName('announce')[4].style.display = "block";
-            year.focus();
-            return false;
-        };
         if (!yearCheck.test(year.value)) {
             document.getElementsByClassName('announce')[4].style.display = "block";
-            year.focus();
             return false;
         };
         if (yearCheck.test(year.value)) {
@@ -92,14 +71,8 @@ window.onload = function() {
     };
 
     day.onblur = function(e) {
-        if (day.value === "") {
-            document.getElementsByClassName('announce')[5].style.display = "block";
-            day.focus();
-            return false;
-        };
         if (!dayCheck.test(day.value)) {
             document.getElementsByClassName('announce')[5].style.display = "block";
-            day.focus();
             return false;
         };
         if (dayCheck.test(day.value)) {
@@ -108,14 +81,8 @@ window.onload = function() {
     };
 
     umail.onblur = function(e) {
-        if (umail.value === "") {
-            document.getElementsByClassName('essential')[3].style.display = "block";
-            umail.focus();
-            return false;
-        };
         if (!mailCheck.test(umail.value)) {
             document.getElementsByClassName('announce')[6].style.display = "block";
-            umail.focus();
             return false;
         };
         if (mailCheck.test(umail.value)) {
@@ -123,7 +90,26 @@ window.onload = function() {
             document.getElementsByClassName('announce')[6].style.display = "none";
         };
     };
+
+    function join_btn() {
+        alert("회원가입이 완료 되었습니다.");
+    };
 };
-function join_btn() {
-    alert("회원가입이 완료 되었습니다.");
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

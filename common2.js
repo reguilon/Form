@@ -1,11 +1,16 @@
-window.onload = function validate() {
-    let idToken = false
-    let pwdToken = false
-    let rePwdToken = false
-    let nameToken = false
-    let yearToken = false
-    let dayToken = false
-    let mailToken = false
+let idToken = false
+let pwdToken = false
+let rePwdToken = false
+let nameToken = false
+let yearToken = false
+let dayToken = false
+let mailToken = false
+let target = document.getElementById('joinBtn');
+
+
+
+
+function validate() {
 
     let uid = document.getElementById("uid");
     let pwd = document.getElementById("pwd");
@@ -19,7 +24,8 @@ window.onload = function validate() {
     let nameCheck = /^[가-힣]{2,4}$/;
     let yearCheck = /^[0-9]{4}/;
     let dayCheck = /^[0-9]{1,2}/;
-    let mailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    let mailCheck = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let tokenType = idToken && pwdToken && rePwdToken && nameToken && yearToken && dayToken && mailToken
 
     uid.onkeyup = () => {
         if (!idCheck.test(document.getElementById('uid').value)) {
@@ -99,39 +105,32 @@ window.onload = function validate() {
             mailToken = true;
         }
     };
-    function join_btn() {
 
-        if (!idToken) {
-            alert("아이디 형식을 확인하세요.")
-            return;
-        }
-        if (!pwdToken) {
-            alert("비밀번호 형식을 확인하세요.")
-            return;
-        }
-        if (!rePwdToken) {
-            alert("비밀번호 확인 형식을 확인하세요.")
-            return;
-        }
-        if (!nameToken) {
-            alert("이름 형식을 확인하세요.")
-            return;
-        }
-        if (!yearToken) {
-            alert("출생연도 형식을 확인하세요.")
-            return;
-        }
-        if (!dayToken) {
-            alert("출생일 형식을 확인하세요.")
-            return;
-        }
-        if (!mailToken) {
-            alert("이메일 형식을 확인하세요.")
-            return;
-        }
+
+    tokenType.test = () => {
+        
+    if (tokenType == true) {
+        target.disabled = false;
+        console.log(tokenType)
+    } else {
+        target.disabled = true;
+        console.log(tokenType)
+    }
     
-        alert("회원가입이 완료 되었습니다.");
-    };
 };
 
+    // switch (tokenType == true) {
+    //     case 'true':
+    //         target.disabled = false;
+    //         console.log(tokenType)
+    //         break;
 
+    //     case 'false':
+    //         target.disabled = true;
+    //         console.log(tokenType)
+    //         break;
+    // }
+    console.log(tokenType)
+};
+
+validate();
